@@ -3,4 +3,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_screen2">Screen2</string>
+    <string name="title_activity_screen3">Screen3</string>
+    <string name="title_activity_screen3v">Screen3v</string>
+    <string name="title_activity_screen4_b">Screen4B</string>
+    <string name="title_activity_screen4_g">Screen4G</string>
+    <string name="title_activity_screen4_t">Screen4T</string>
+    <string name="title_activity_screen5">Screen5</string>
+    <string name="title_activity_screen6">Screen6</string>
 </resources>

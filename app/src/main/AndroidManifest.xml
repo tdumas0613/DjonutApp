@@ -16,6 +16,70 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Screen2"
+            android:label="@string/title_activity_screen2"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.teamawesome.djonutapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Screen3"
+            android:label="@string/title_activity_screen3"
+            android:parentActivityName=".Screen2" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.teamawesome.djonutapp.Screen2" />
+        </activity>
+        <activity
+            android:name=".Screen3v"
+            android:label="@string/title_activity_screen3v"
+            android:parentActivityName=".Screen3" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.teamawesome.djonutapp.Screen3" />
+        </activity>
+        <activity
+            android:name=".Screen4B"
+            android:label="@string/title_activity_screen4_b"
+            android:parentActivityName=".Screen3" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.teamawesome.djonutapp.Screen3" />
+        </activity>
+        <activity
+            android:name=".Screen4G"
+            android:label="@string/title_activity_screen4_g"
+            android:parentActivityName=".Screen4B" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.teamawesome.djonutapp.Screen4B" />
+        </activity>
+        <activity
+            android:name=".Screen4T"
+            android:label="@string/title_activity_screen4_t"
+            android:parentActivityName=".Screen4G" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.teamawesome.djonutapp.Screen4G" />
+        </activity>
+        <activity
+            android:name=".Screen5"
+            android:label="@string/title_activity_screen5"
+            android:parentActivityName=".Screen4T" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.teamawesome.djonutapp.Screen4T" />
+        </activity>
+        <activity
+            android:name=".Screen6"
+            android:label="@string/title_activity_screen6"
+            android:parentActivityName=".Screen3" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.teamawesome.djonutapp.Screen3" />
+        </activity>
     </application>
 
 </manifest>
