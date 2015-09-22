@@ -41,4 +41,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Screen4B.class);
         startActivity(intent);
     }
+
+    public void jumpToLogin(View view){
+        Intent intent = new Intent(this, Screen2.class);
+        startActivity(intent);
+    }
 }

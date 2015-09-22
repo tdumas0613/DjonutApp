@@ -10,6 +10,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="jumpToScreen4"
-        android:text="Jump To Screen 4"/> <!--added function to test layout-->
+        android:text="Jump To Screen 4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" /> <!--added function to test layout-->
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="jumpToLogin"
+        android:text="Jump To Login Screen"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

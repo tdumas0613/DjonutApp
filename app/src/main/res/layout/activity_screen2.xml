@@ -6,7 +6,32 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.teamawesome.djonutapp.Screen2">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <!--<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/djonutLogo"
+        android:src="@drawable/logo"
+        android:alpha=".70"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/facebookBlue"
+        android:onClick="logIn"
+        android:text="Sign in with Facebook"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="logIn"
+        android:text="Sign in with Email"
+        android:id="@+id/button"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
