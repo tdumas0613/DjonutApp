@@ -1,9 +1,11 @@
 package com.example.teamawesome.djonutapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,5 +35,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void jumpToScreen4(View view){
+        Intent intent = new Intent(this, Screen4B.class);
+        startActivity(intent);
     }
 }

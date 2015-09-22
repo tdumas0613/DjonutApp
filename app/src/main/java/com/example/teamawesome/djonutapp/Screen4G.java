@@ -1,9 +1,11 @@
 package com.example.teamawesome.djonutapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class Screen4G extends AppCompatActivity {
 
@@ -11,6 +13,29 @@ public class Screen4G extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen4_g);
+
+        // Check that the activity is using the layout version with
+        // the fragment_container FrameLayout
+        if (findViewById(R.id.fragment_container2) != null) {
+
+            // However, if we're being restored from a previous state,
+            // then we don't need to do anything and should return or else
+            // we could end up with overlapping fragments.
+            if (savedInstanceState != null) {
+                return;
+            }
+
+            // Create a new Fragment to be placed in the activity layout
+            FragmentTwo secondFragment = new FragmentTwo();
+
+            // In case this activity was started with special instructions from an
+            // Intent, pass the Intent's extras to the fragment as arguments
+            secondFragment.setArguments(getIntent().getExtras());
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+            getFragmentManager().beginTransaction()
+                    .add(R.id.fragment_container2, secondFragment).commit();
+        }
     }
 
     @Override
@@ -33,5 +58,14 @@ public class Screen4G extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void glazeToToppings(View view){
+        Intent intent = new Intent(this,Screen4T.class);
+        startActivity(intent);
+
+        // has a slide in transition, nut no slide out when "back" is pressed
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 }
