@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 public class Screen3 extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class Screen3 extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_screen3, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
