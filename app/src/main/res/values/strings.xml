@@ -9,8 +9,8 @@
     <string name="title_activity_screen4_b">Choose Your Base</string>
     <string name="title_activity_screen4_g">Choose Your Glaze</string>
     <string name="title_activity_screen4_t">Choose Your Toppings</string>
-    <string name="title_activity_screen5">Screen5</string>
-    <string name="title_activity_screen6">Screen6</string>
+    <string name="title_activity_screen5">Submit Your Idea</string>
+    <string name="title_activity_screen6">Thank You!</string>
     <string name="continueBtn">Continue</string>
     <string name="voting">Voting will open October 22nd at 12:00 A.M.</string>
 </resources>
