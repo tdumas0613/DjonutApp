@@ -52,6 +52,12 @@ public class Screen4G extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        if (id == android.R.id.home){
+            finish();
+            overridePendingTransition(R.anim.back_in,R.anim.back_out);
+            return true;
+        }
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
@@ -67,5 +73,11 @@ public class Screen4G extends AppCompatActivity {
 
         // has a slide in transition, nut no slide out when "back" is pressed
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+    }
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        overridePendingTransition(R.anim.back_in,R.anim.back_out);
     }
 }

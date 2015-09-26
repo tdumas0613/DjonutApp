@@ -15,7 +15,6 @@
         android:stretchMode="columnWidth"
         android:gravity="center"
         android:paddingBottom="55dp"
-        android:listSelector="#d13339"
         />
 
 </LinearLayout>
