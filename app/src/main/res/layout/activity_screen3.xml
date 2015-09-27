@@ -8,12 +8,13 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="700dp"
         android:id="@+id/djonutLogo"
         android:src="@drawable/logo"
-        android:alpha=".70"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
 
     <ImageButton
         android:id="@+id/submitButton"
@@ -21,18 +22,24 @@
         android:layout_height="wrap_content"
         android:src="@drawable/submit"
         android:onClick="djonutSubmit"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="166dp" />
+        android:layout_above="@+id/voteButton"
+        android:layout_centerHorizontal="true" />
     <ImageButton
         android:id="@+id/voteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/vote"
         android:onClick="vote"
+        android:layout_above="@+id/submitButton"
+        android:layout_centerHorizontal="true" />
+    <ImageButton
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/about"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="145dp" />
+        android:layout_alignLeft="@+id/voteButton"
+        android:layout_alignStart="@+id/voteButton" />
 
 
 </RelativeLayout>

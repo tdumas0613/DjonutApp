@@ -11,9 +11,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/djonutLogo"
         android:src="@drawable/logo"
-        android:alpha=".70"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/imageButton" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -22,8 +21,8 @@
         android:background="@drawable/facebook"
         android:onClick="logIn"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="119dp" />
+        android:layout_alignRight="@+id/imageButton2"
+        android:layout_alignEnd="@+id/imageButton2" />
 
     <ImageButton
         android:layout_width="wrap_content"
