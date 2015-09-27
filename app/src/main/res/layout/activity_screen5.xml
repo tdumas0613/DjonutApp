@@ -34,7 +34,8 @@
         android:layout_marginBottom="50dp"
         android:layout_above="@+id/editText2"
         android:layout_centerHorizontal="true"
-        android:gravity="center_vertical|center_horizontal" />
+        android:gravity="center_vertical|center_horizontal"
+        android:inputType="textCapWords"/>
 
     <EditText
         android:layout_width="700dp"
@@ -50,7 +51,8 @@
         android:layout_marginBottom="65dp"
         android:layout_above="@+id/button"
         android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_alignStart="@+id/editText"
+        android:inputType="textCapSentences"/>
 
     <Button
         android:layout_width="wrap_content"

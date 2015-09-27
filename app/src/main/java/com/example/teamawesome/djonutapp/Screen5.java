@@ -13,6 +13,8 @@ import android.widget.EditText;
 
 public class Screen5 extends AppCompatActivity {
 
+    public final static String EXTRA_MESSAGE = "com.example.teamawesome.djonutapp.MESSAGE";
+
     private EditText edittext;
     private EditText edittext2;
 
@@ -79,8 +81,9 @@ public class Screen5 extends AppCompatActivity {
 
     public void jumpToScreen6(View view){
         Intent intent = new Intent(this, Screen6.class);
+        EditText myET = (EditText) findViewById(R.id.editText);
+        String str = myET.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE,str);
         startActivity(intent);
-
-        String str=edittext.getEditableText().toString();
     }
 }

@@ -23,16 +23,17 @@
         android:layout_below="@+id/toppingsMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/tToSBtn"
         android:id="@+id/fragment_container3"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/tToSBtn"
-        android:clickable="false"
-        android:alpha="0.5"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/continuebtn"
+        android:layout_marginTop="-45dp"
         android:layout_alignParentBottom="true"
-        android:text="Submit Djonut"
-        android:onClick="toppingsToComplete"/>
+        android:onClick="toppingsToComplete"
+        android:alpha="0.5"/>
 
 </RelativeLayout>

@@ -30,30 +30,12 @@ public class FragmentThree extends Fragment {
         GridView gridview = (GridView) view.findViewById(R.id.gridview3);
         final ImageAdapter adapter = new ImageAdapter(view.getContext());
         gridview.setAdapter(adapter);
-        gridview.setChoiceMode(GridView.CHOICE_MODE_MULTIPLE_MODAL);
 
 
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-
                 adapter.onItemSelect(parent, v, position, id);
-
-                /*This following code replaces the fragment, not what we want to do.
-                But put code here that you want to happen on selection of an item in the grid
-
-                FragmentTwo newFragment = new FragmentTwo();
-
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-
-                // Replace whatever is in the fragment_container view with this fragment,
-                // and add the transaction to the back stack
-                transaction.replace(R.id.fragment_place1, newFragment);
-                transaction.addToBackStack(null);
-
-                // Commit the transaction
-                transaction.commit();*/
-
             }
         });
 
@@ -81,27 +63,8 @@ public class FragmentThree extends Fragment {
             return 0;
         }
 
-
-
-        // create a new ImageView for each item referenced by the Adapter
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ImageView imageView;
-            if (convertView == null) {
-                // if it's not recycled, initialize some attributes
-                imageView = new ImageView(mContext);
-                imageView.setLayoutParams(new GridView.LayoutParams(251, 251));
-                imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                imageView.setBackgroundResource(R.drawable.imageview_border);
-            } else {
-                imageView = (ImageView) convertView;
-            }
-
-            imageView.setImageResource(mThumbIds[position]);
-            return imageView;
-        }
-
         public void onItemSelect(AdapterView<?> parent, View v, int pos, long id) {
-            Integer position = Integer.valueOf(pos);
+            Integer position = pos;
 
             if(mSelected.contains(position)) {
                 mSelected.remove(position);
@@ -126,22 +89,50 @@ public class FragmentThree extends Fragment {
             }
         }
 
+        // create a new ImageView for each item referenced by the Adapter
+        public View getView(int position, View convertView, ViewGroup parent) {
+            ImageView imageView;
+            if (convertView == null) {
+                // if it's not recycled, initialize some attributes
+                imageView = new ImageView(mContext);
+                imageView.setLayoutParams(new GridView.LayoutParams(251, 251));
+                imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                imageView.setBackgroundResource(R.drawable.imageview_border);
+            } else {
+                imageView = (ImageView) convertView;
+            }
+
+            imageView.setImageResource(mThumbIds[position]);
+
+            if(mSelected.contains(position)) {
+                imageView.setBackgroundColor(Color.parseColor("#d13339"));
+
+            }
+            else {
+                imageView.setBackgroundResource(R.drawable.imageview_border);
+            }
+
+            return imageView;
+        }
+
+
+
         // references to our images
         private Integer[] mThumbIds = {
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn
+                R.drawable.baconbites,R.drawable.blueberries,
+                R.drawable.brownie,R.drawable.candiedpecans,
+                R.drawable.cookie,R.drawable.cranberries,
+                R.drawable.darkchocolatebites,R.drawable.drizzle,
+                R.drawable.freshstrawberries,R.drawable.fruitloops,
+                R.drawable.graham,R.drawable.marshmallow,
+                R.drawable.oreo,R.drawable.peanutbutterchips,
+                R.drawable.peppermint,R.drawable.pretzelpieces,
+                R.drawable.reeses,R.drawable.ricechex,
+                R.drawable.rosepetals,R.drawable.rumsoakedbanana,
+                R.drawable.seasalt,R.drawable.sriracha,
+                R.drawable.sprinkles,R.drawable.toastcoconut,
+                R.drawable.toastcrunch,R.drawable.toffee,
+                R.drawable.whitechocolatechips
         };
     }
 }

@@ -23,16 +23,18 @@
         android:layout_below="@+id/glazeMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fragment_container2"/>
+        android:id="@+id/fragment_container2"
+        android:layout_above="@+id/gToTBtn"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/gToTBtn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:layout_marginTop="-45dp"
+        android:src="@drawable/continuebtn"
         android:layout_alignParentBottom="true"
-        android:text="@string/continueBtn"
-        android:clickable="false"
-        android:alpha="0.5"
-        android:onClick="glazeToToppings"/>
+        android:onClick="glazeToToppings"
+        android:alpha="0.5"/>
 
 </RelativeLayout>
