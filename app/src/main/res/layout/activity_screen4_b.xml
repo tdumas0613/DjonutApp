@@ -26,15 +26,17 @@
         android:layout_height="match_parent"
         android:id="@+id/fragment_container1" />
 
-    <Button
-        android:layout_width="match_parent"
+    <ImageButton
+        android:id="@+id/bToGBtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/continueBtn"
+        android:src="@drawable/continuebtn"
         android:layout_alignParentBottom="true"
         android:clickable="false"
-        android:id="@+id/bToGBtn"
         android:onClick="baseToGlaze"
         android:alpha="0.5"/>
+
+
 
 
 </RelativeLayout>

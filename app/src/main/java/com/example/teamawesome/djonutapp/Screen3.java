@@ -38,6 +38,11 @@ public class Screen3 extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed(){
+        finish();
+    }
     public void djonutSubmit(View view){
         Intent intent = new Intent(this, Screen4B.class);
         startActivity(intent);

@@ -14,6 +14,8 @@ public class Screen4B extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen4_b);
 
+        this.findViewById(R.id.bToGBtn).setClickable(false);
+
         // Check that the activity is using the layout version with
         // the fragment_container FrameLayout
         if (findViewById(R.id.fragment_container1) != null) {

@@ -13,4 +13,5 @@
     <string name="title_activity_screen6">Thank You!</string>
     <string name="continueBtn">Continue</string>
     <string name="voting">Voting will open October 22nd at 12:00 A.M.</string>
+    <string name="oops">* Oh no! Looks like you\'re jumping the gun. Come back on December 4th and help us decide on a winning recipe.</string>
 </resources>
