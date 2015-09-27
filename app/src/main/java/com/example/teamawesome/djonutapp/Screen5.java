@@ -2,6 +2,7 @@ package com.example.teamawesome.djonutapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -74,5 +75,12 @@ public class Screen5 extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void jumpToScreen6(View view){
+        Intent intent = new Intent(this, Screen6.class);
+        startActivity(intent);
+
+        String str=edittext.getEditableText().toString();
     }
 }

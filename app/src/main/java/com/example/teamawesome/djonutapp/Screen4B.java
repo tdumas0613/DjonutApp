@@ -52,6 +52,7 @@ public class Screen4B extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
@@ -64,7 +65,6 @@ public class Screen4B extends AppCompatActivity {
         Intent intent = new Intent(this,Screen4G.class);
         startActivity(intent);
 
-        // has a slide in transition, nut no slide out when "back" is pressed
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 }
