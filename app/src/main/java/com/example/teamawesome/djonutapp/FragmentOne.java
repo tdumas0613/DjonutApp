@@ -106,7 +106,7 @@ public class FragmentOne extends Fragment {
         // references to our images
         private Integer[] mThumbIds = {
                 R.drawable.vanilla,R.drawable.blueberry,
-                R.drawable.lemon,R.drawable.saltycarmel,
+                R.drawable.lemon,R.drawable.saltycaramel,
                 R.drawable.redvelvet,R.drawable.pumpkin,
                 R.drawable.peanutbutter,R.drawable.cinnamon,
                 R.drawable.cocoespresso

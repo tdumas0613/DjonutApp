@@ -2,6 +2,7 @@ package com.example.teamawesome.djonutapp;
 
 /**
  * Created by Louis on 9/24/2015.
+ * 
  */
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.WindowManager;
 
 /**
  * Created by Louis on 9/22/2015.
+ *
  */
 public class Splash extends AppCompatActivity {
 
@@ -31,7 +33,7 @@ public class Splash extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(3000);
-                    Intent startMainScreen = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent startMainScreen = new Intent(getApplicationContext(), Screen2.class);
                     startActivity(startMainScreen);
                     finish();
                 } catch (InterruptedException e) {

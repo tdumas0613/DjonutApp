@@ -98,13 +98,13 @@ public class FragmentTwo extends Fragment {
         // references to our images
         private Integer[] mThumbIds = {
                 R.drawable.bloodorange,R.drawable.brownbutter,
-                R.drawable.cinnamoncreme,R.drawable.yellow_btn,
+                R.drawable.cinnamoncreme,R.drawable.coconut,
                 R.drawable.cookiebutter,R.drawable.creamcheese,
                 R.drawable.doubleespresso,R.drawable.dulcedeleche,
                 R.drawable.greekyogurt,R.drawable.irishcream,
                 R.drawable.limoncello,R.drawable.maple,
                 R.drawable.matcha,R.drawable.mint,
-                R.drawable.nutella,R.drawable.rasberry,
+                R.drawable.nutella,R.drawable.raspberry,
                 R.drawable.strawberries,R.drawable.vanillabean
         };
     }
