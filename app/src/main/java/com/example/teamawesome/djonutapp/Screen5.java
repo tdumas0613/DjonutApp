@@ -2,6 +2,7 @@ package com.example.teamawesome.djonutapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,6 +12,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 public class Screen5 extends AppCompatActivity {
+
+    public final static String EXTRA_MESSAGE = "com.example.teamawesome.djonutapp.MESSAGE";
 
     private EditText edittext;
     private EditText edittext2;
@@ -74,5 +77,13 @@ public class Screen5 extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void jumpToScreen6(View view){
+        Intent intent = new Intent(this, Screen6.class);
+        EditText myET = (EditText) findViewById(R.id.editText);
+        String str = myET.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE,str);
+        startActivity(intent);
     }
 }

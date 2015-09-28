@@ -1,9 +1,12 @@
 package com.example.teamawesome.djonutapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 public class Screen3 extends AppCompatActivity {
 
@@ -20,6 +23,7 @@ public class Screen3 extends AppCompatActivity {
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -33,5 +37,18 @@ public class Screen3 extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed(){
+        finish();
+    }
+    public void djonutSubmit(View view){
+        Intent intent = new Intent(this, Screen4B.class);
+        startActivity(intent);
+    }
+    public void vote(View view){
+        Intent intent = new Intent(this, Screen3v.class);
+        startActivity(intent);
     }
 }

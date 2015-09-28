@@ -35,6 +35,9 @@ public class FragmentTwo extends Fragment {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
 
+                getActivity().findViewById(R.id.gToTBtn).setClickable(true);
+                getActivity().findViewById(R.id.gToTBtn).setAlpha(1);
+
                 /*This following code replaces the fragment, not what we want to do.
                 But put code here that you want to happen on selection of an item in the grid
 
@@ -81,9 +84,9 @@ public class FragmentTwo extends Fragment {
             if (convertView == null) {
                 // if it's not recycled, initialize some attributes
                 imageView = new ImageView(mContext);
-                imageView.setLayoutParams(new GridView.LayoutParams(275, 275));
+                imageView.setLayoutParams(new GridView.LayoutParams(251, 251));
                 imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                imageView.setPadding(8, 8, 8, 8);
+                imageView.setBackgroundResource(R.drawable.imageview_border);
             } else {
                 imageView = (ImageView) convertView;
             }
@@ -94,15 +97,15 @@ public class FragmentTwo extends Fragment {
 
         // references to our images
         private Integer[] mThumbIds = {
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn,
-                R.drawable.yellow_btn,R.drawable.yellow_btn
+                R.drawable.bloodorange,R.drawable.brownbutter,
+                R.drawable.cinnamoncreme,R.drawable.yellow_btn,
+                R.drawable.cookiebutter,R.drawable.creamcheese,
+                R.drawable.doubleespresso,R.drawable.dulcedeleche,
+                R.drawable.greekyogurt,R.drawable.irishcream,
+                R.drawable.limoncello,R.drawable.maple,
+                R.drawable.matcha,R.drawable.mint,
+                R.drawable.nutella,R.drawable.rasberry,
+                R.drawable.strawberries,R.drawable.vanillabean
         };
     }
 }

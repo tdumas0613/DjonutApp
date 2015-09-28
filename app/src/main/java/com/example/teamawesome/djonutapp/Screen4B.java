@@ -14,6 +14,8 @@ public class Screen4B extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen4_b);
 
+        this.findViewById(R.id.bToGBtn).setClickable(false);
+
         // Check that the activity is using the layout version with
         // the fragment_container FrameLayout
         if (findViewById(R.id.fragment_container1) != null) {
@@ -52,6 +54,7 @@ public class Screen4B extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
@@ -64,7 +67,6 @@ public class Screen4B extends AppCompatActivity {
         Intent intent = new Intent(this,Screen4G.class);
         startActivity(intent);
 
-        // has a slide in transition, nut no slide out when "back" is pressed
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 }
